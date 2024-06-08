@@ -22,16 +22,32 @@ kapt {
 }
 
 dependencies {
-    implementation(projects.voyagerScreenmodel)
-    implementation(projects.voyagerNavigator)
-    implementation(projects.voyagerTabNavigator)
-    implementation(projects.voyagerBottomSheetNavigator)
-    implementation(projects.voyagerTransitions)
-    implementation(projects.voyagerHilt)
-    implementation(projects.voyagerKodein)
-    implementation(projects.voyagerKoin)
-    implementation(projects.voyagerRxjava)
-    implementation(projects.voyagerLivedata)
+//    implementation(projects.voyagerScreenmodel)
+//    implementation(projects.voyagerNavigator)
+//    implementation(projects.voyagerTabNavigator)
+//    implementation(projects.voyagerBottomSheetNavigator)
+//    implementation(projects.voyagerTransitions)
+//    implementation(projects.voyagerHilt)
+//    implementation(projects.voyagerKodein)
+//    implementation(projects.voyagerKoin)
+//    implementation(projects.voyagerRxjava)
+//    implementation(projects.voyagerLivedata)
+
+    // TODO: swap these to see success/fail results
+    val success = "1.1.0-alpha04"
+    val fail = "1.1.0-beta02"
+    val voyagerVersion = success
+    implementation("cafe.adriel.voyager:voyager-screenmodel:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-bottom-sheet-navigator:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-hilt:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-kodein:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-koin:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-rxjava:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-livedata:$voyagerVersion")
+    implementation("androidx.compose.material3:material3:1.2.1")
 
     implementation(libs.kodein)
     implementation(libs.koin)

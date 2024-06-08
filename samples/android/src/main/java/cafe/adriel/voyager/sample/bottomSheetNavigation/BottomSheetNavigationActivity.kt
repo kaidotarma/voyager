@@ -4,8 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material3.MaterialTheme
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.bottomSheet.BottomSheetNavigator
+import cafe.adriel.voyager.sample.AppTheme
 
 class BottomSheetNavigationActivity : ComponentActivity() {
 
@@ -14,8 +16,10 @@ class BottomSheetNavigationActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            BottomSheetNavigator {
-                Navigator(BackScreen())
+            AppTheme {
+                BottomSheetNavigator(sheetBackgroundColor = MaterialTheme.colorScheme.surface) {
+                    Navigator(BackScreen())
+                }
             }
         }
     }

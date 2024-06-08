@@ -30,7 +30,6 @@ import cafe.adriel.voyager.sample.nestedNavigation.NestedNavigationActivity
 import cafe.adriel.voyager.sample.parcelableScreen.ParcelableActivity
 import cafe.adriel.voyager.sample.rxJavaIntegration.RxJavaIntegrationActivity
 import cafe.adriel.voyager.sample.screenModel.ScreenModelActivity
-import cafe.adriel.voyager.sample.screenTransition.ScreenTransitionActivity
 import cafe.adriel.voyager.sample.stateStack.StateStackActivity
 import cafe.adriel.voyager.sample.tabNavigation.TabNavigationActivity
 
@@ -67,7 +66,6 @@ class SampleActivity : ComponentActivity() {
                 StartSampleButton<LiveDataIntegrationActivity>("LiveData Integration")
                 StartSampleButton<HiltMainActivity>("Hilt Integration")
                 StartSampleButton<LegacyActivity>("Legacy Integration")
-                StartSampleButton<ScreenTransitionActivity>("Screen Transition")
             }
         }
     }
@@ -78,7 +76,9 @@ class SampleActivity : ComponentActivity() {
 
         Button(
             onClick = { context.startActivity(Intent(this, T::class.java)) },
-            modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp)
         ) {
             Text(text = text)
         }
