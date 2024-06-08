@@ -36,7 +36,7 @@ dependencies {
     // TODO: swap these to see success/fail results
     val success = "1.1.0-alpha04"
     val fail = "1.1.0-beta02"
-    val voyagerVersion = success
+    val voyagerVersion = fail
     implementation("cafe.adriel.voyager:voyager-screenmodel:$voyagerVersion")
     implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
     implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
